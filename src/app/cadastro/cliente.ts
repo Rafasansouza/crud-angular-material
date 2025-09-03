@@ -6,6 +6,8 @@ export class Cliente {
     email?: string;
     cpf?: string;
     dtNascimento?: string;
+    uf?: string;
+    municipio?: string;
     deletando:boolean = false;
 
     static newCliente() {
