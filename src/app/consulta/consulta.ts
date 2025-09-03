@@ -27,6 +27,7 @@ import { Cliente } from '../cadastro/cliente';
 })
 export class Consulta implements OnInit {
 
+  nomeBusca: string = '';
   listaClientes: Cliente[] = [];
   colunasTabela: string[] = ["id", "nome", "cpf", "dtNascimento", "email"]
 
@@ -38,4 +39,7 @@ export class Consulta implements OnInit {
     this.listaClientes = this.service.consultarCliente('');
   }
 
+  consultar(){
+    this.listaClientes = this.service.consultarCliente(this.nomeBusca)
+  }
 }
